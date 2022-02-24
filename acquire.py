@@ -11,10 +11,10 @@ url_telco = f'mysql+pymysql://{env.user}:{env.password}@{env.host}/telco_churn'
 
 #%%
 
-def get_titanic_data():
+def get_titanic_data(use_cache =True):
     filename = 'titanic.csv'
     
-    if os.path.exists(filename):
+    if os.path.exists(filename) and use_cache:
         print('Reading from csv file...')
         return pd.read_csv(filename)
     
@@ -32,10 +32,10 @@ def get_titanic_data():
 # %%
 get_titanic_data()
 # %%
-def get_iris_data():
+def get_iris_data(use_cache = True):
     filename = 'iris.csv'
     
-    if os.path.exists(filename):
+    if os.path.exists(filename) and use_cache:
         print('Reading from csv file...')
         return pd.read_csv(filename)
     
@@ -53,10 +53,10 @@ def get_iris_data():
 # %%
 get_iris_data()
 # %%
-def get_telco_data():
+def get_telco_data(use_cache = True):
     filename = 'telco.csv'
     
-    if os.path.exists(filename):
+    if os.path.exists(filename) and use_cache:
         print('Reading from csv file...')
         return pd.read_csv(filename)
     
