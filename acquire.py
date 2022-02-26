@@ -80,4 +80,6 @@ def get_telco_data(use_cache = True):
 #  4 tables together, contains all the contract, payment, and internet service option
 
 get_telco_data()
+
+
 # %%
